@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">BillSplit</string>
-    <string name="onboardingpage1_bg_image">bgimage_onboardingpage</string>
+    <string name="onboardingpage1_bg_image">bgimage_first_page</string>
     <string name="onboardingpage1_button_name">Next</string>
 </resources>
