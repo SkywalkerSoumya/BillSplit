@@ -7,7 +7,7 @@ android:layout_height="match_parent"
 android:background="#B3DAE2"
 android:paddingHorizontal="0dp"
 android:paddingVertical="0dp"
-tools:context=".MainActivity">
+tools:context=".SplashScreen">
 
 <ImageView
     android:id="@+id/imageView"

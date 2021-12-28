@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BillSplit">
         <activity
+            android:name=".onboardingScreen_2"
+            android:exported="false" />
+        <activity
             android:name=".SplashScreen"
             android:exported="false" />
         <activity
