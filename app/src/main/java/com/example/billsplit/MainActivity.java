@@ -3,6 +3,7 @@ package com.example.billsplit;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     Animation topAnimation, bottomAnimation;
     ImageView logo;
     TextView appName;
+    SharedPreferences sharedPreferences;   // This is used to store small amount of data in the device
+    Boolean firstTimeUser;     // It will help to check if the app is opening for first time or not
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +42,33 @@ public class MainActivity extends AppCompatActivity {
         logo.setAnimation(topAnimation);
         appName.setAnimation(bottomAnimation);
 
-        // Adding a delay in loading the next screen.
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, onboardingScreen_1.class);
-                startActivity(intent);
-                finish(); // Using the finish function so that user can't revert back to this page pressing the back button.
-            }
-        }, SPLASH_SCREEN_TIME);
+        //initializing sharedPreferences and storing data in boolean for first time
+        sharedPreferences = getSharedPreferences("OpeningPrefs", MODE_PRIVATE);
+        firstTimeUser = sharedPreferences.getBoolean("firstTimeUser", true);
+
+        if (firstTimeUser) {
+            // Adding a delay in loading the next screen.
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    firstTimeUser = false;
+                    editor.putBoolean("firstTimeUser",firstTimeUser);
+                    editor.apply(); //updating boolean to false so that next time direct homepage will open
+
+                    Intent intent = new Intent(MainActivity.this, onboardingScreen_1.class);
+                    startActivity(intent);
+                    finish(); // Using the finish function so that user can't revert back` to this page pressing the back button.
+                }
+            }, SPLASH_SCREEN_TIME);
+        }
+        else{
+            // If the user is not firstTimeUser then Else part will run and open Homepage
+            Intent intent = new Intent(MainActivity.this, Homepage.class);
+            startActivity(intent);
+            finish();
+        }
     }
 }
 
