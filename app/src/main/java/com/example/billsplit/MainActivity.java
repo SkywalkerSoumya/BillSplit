@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, Homepage.class);
+                Intent intent = new Intent(MainActivity.this, onboardingScreen_1.class);
                 startActivity(intent);
                 finish(); // Using the finish function so that user can't revert back to this page pressing the back button.
             }
