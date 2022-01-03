@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         // Removing the Status bar for the Splash Screen.
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash_screen);
@@ -46,29 +45,26 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("OpeningPrefs", MODE_PRIVATE);
         firstTimeUser = sharedPreferences.getBoolean("firstTimeUser", true);
 
-        if (firstTimeUser) {
-            // Adding a delay in loading the next screen.
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
+        // Adding a delay in loading the next screen.
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
 
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    firstTimeUser = false;
-                    editor.putBoolean("firstTimeUser",firstTimeUser);
+                Intent intent;
+
+                if(firstTimeUser) {
+                    intent = new Intent(MainActivity.this, onboardingScreen_1.class);
+                    editor.putBoolean("firstTimeUser", false);
                     editor.apply(); //updating boolean to false so that next time direct homepage will open
-
-                    Intent intent = new Intent(MainActivity.this, onboardingScreen_1.class);
-                    startActivity(intent);
-                    finish(); // Using the finish function so that user can't revert back` to this page pressing the back button.
+                }else{
+                    intent = new Intent(MainActivity.this, Homepage.class);
                 }
-            }, SPLASH_SCREEN_TIME);
-        }
-        else{
-            // If the user is not firstTimeUser then Else part will run and open Homepage
-            Intent intent = new Intent(MainActivity.this, Homepage.class);
-            startActivity(intent);
-            finish();
-        }
+
+                startActivity(intent);
+                finish(); // Using the finish function so that user can't revert back` to this page pressing the back button.
+            }
+        }, SPLASH_SCREEN_TIME);
     }
 }
 
