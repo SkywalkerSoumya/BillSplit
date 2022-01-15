@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BillSplit">
         <activity
+            android:name=".CreateGroup"
+            android:exported="false" />
+        <activity
             android:name=".onboardingScreen_1"
             android:exported="false" />
         <activity

@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putBoolean("firstTimeUser", false);
                     editor.apply(); //updating boolean to false so that next time direct homepage will open
                 }else{
-                    intent = new Intent(MainActivity.this, Homepage.class);
+                    intent = new Intent(MainActivity.this, CreateGroup.class);
                 }
 
                 startActivity(intent);

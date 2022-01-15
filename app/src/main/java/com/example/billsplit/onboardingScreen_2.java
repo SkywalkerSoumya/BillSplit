@@ -19,7 +19,7 @@ public class onboardingScreen_2 extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(onboardingScreen_2.this, Homepage.class);
+                Intent intent = new Intent(onboardingScreen_2.this, CreateGroup.class);
                 startActivity(intent);
             }
         });;
