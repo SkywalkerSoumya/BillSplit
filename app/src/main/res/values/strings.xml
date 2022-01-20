@@ -2,4 +2,6 @@
     <string name="app_name">BillSplit</string>
     <string name="onboardingpage1_bg_image">bgimage_first_page</string>
     <string name="onboardingpage1_button_name">Next</string>
+    <string name="navigation_open">Open Navigation drawer</string>
+    <string name="navigation_close">Close Navigation drawer</string>
 </resources>
