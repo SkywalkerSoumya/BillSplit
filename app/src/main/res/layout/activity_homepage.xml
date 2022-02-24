@@ -20,7 +20,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/scrollView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation_bar_menu" />
+        app:menu="@menu/navigation_bar_menu">
+
+    </com.google.android.material.navigation.NavigationView>
 
     <!--<ScrollView
         android:id="@+id/scrollView2"
@@ -42,26 +44,26 @@
             android:background="@color/secondaryColor"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/settleUpBtn"
-            android:layout_width="116dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="70dp"
-            android:background="@drawable/add_more_grp_btn_bg"
-            android:fontFamily="monospace"
-            android:text="Settle Up"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <Button
+                    android:id="@+id/overviewBtn"
+                    android:layout_width="116dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/add_more_grp_btn_bg"
+                    android:fontFamily="monospace"
+                    android:text="OVERVIEW"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/expensesBtn"
@@ -77,6 +79,39 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/hmscrnFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/overviewBtn"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageButton
+            android:id="@+id/homeScreenAddBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/add_more_grp_btn_bg"
+            android:src="@drawable/add_more_grp_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.977" />
+
+        <ImageButton
+            android:id="@+id/settleUpBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="556dp"
+            android:background="@drawable/add_more_grp_btn_bg"
+            android:src="@drawable/settle_up_icon"
+            app:layout_constraintEnd_toEndOf="@+id/homeScreenAddBtn"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/homeScreenAddBtn"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

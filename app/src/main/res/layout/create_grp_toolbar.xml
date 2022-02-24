@@ -29,10 +29,10 @@
             android:id="@+id/right_icon_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/save_icon"
-            android:foregroundGravity="right"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            android:background="@drawable/save_icon"
+            android:foregroundGravity="right" />
 
     </RelativeLayout>
 

@@ -3,28 +3,52 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/about_icon.xml" value="0.15" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/add_more_grp_btn_bg.xml" value="0.2712820512820513" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/add_more_grp_button.xml" value="0.176" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/addperson_btn_icon.xml" value="0.2657407407407407" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/blank_face_foreground.xml" value="0.2518518518518518" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/bottom_dialoguemenu_bg.xml" value="0.26944444444444443" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/button_next.xml" value="0.20833333333333334" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/camera_icon.xml" value="0.2" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/camera_icon_foreground.xml" value="0.24814814814814815" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/edit_icon.xml" value="0.24814814814814815" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/groupthumbnail.xml" value="0.2037037037037037" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/homescreen_add_btn.xml" value="0.2" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/homescreen_btn_bg.xml" value="0.2712820512820513" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/ic_baseline_dashboard_24.xml" value="0.2712820512820513" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.24814814814814815" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/ic_sharp_share_24.xml" value="0.15" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/menu_icon.xml" value="0.2518518518518518" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/newgrpbtn.xml" value="0.2037037037037037" />
-        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_homepage.xml" value="0.259375" />
-        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_main.xml" value="0.12613981762917933" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/save_icon.xml" value="0.26944444444444443" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/settle_up_icon.xml" value="0.22604166666666667" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/share_icon.xml" value="0.24814814814814815" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/font/aladin.xml" value="0.15" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_add_new_member_btmsheet.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_create_group.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_expenses_details.xml" value="0.259375" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_homepage.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_homepg_addnewmem_bottomsheet.xml" value="0.2554347826086957" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_homepg_bottomup_sheet.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_main.xml" value="0.136" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_mainpage.xml" value="0.23097826086956522" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_navmenu_id.xml" value="0.264" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_onboarding_page1.xml" value="0.12613981762917933" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_onboarding_screen1.xml" value="0.23097826086956522" />
-        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_onboarding_screen_2.xml" value="0.12613981762917933" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_onboarding_screen_2.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_settle_up_page.xml" value="0.259375" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_splash_screen.xml" value="0.23958333333333334" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/drawable/add_more_grp_btn_bg.xml" value="0.2703125" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_create_group.xml" value="0.24864130434782608" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_create_profile.xml" value="0.24864130434782608" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_expenses_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_homepage.xml" value="0.176" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/add_mem_list.xml" value="0.1431159420289855" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/create_grp_toolbar.xml" value="0.1431159420289855" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/fragment__add_new_member.xml" value="0.2554347826086957" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/fragment_expenses.xml" value="0.259375" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/menu/navigation_bar_menu.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/menu/sidemenu.xml" value="0.4" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/mipmap-anydpi-v26/camera_icon.xml" value="0.24814814814814815" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/mipmap-anydpi-v26/camera_icon_round.xml" value="0.15" />
         <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_navmenu_id.xml" value="0.13020833333333334" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_onboarding_screen1.xml" value="0.14447463768115942" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_onboarding_screen_2.xml" value="0.25416666666666665" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_settle_up_page.xml" value="0.25416666666666665" />
         <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/add_mem_list.xml" value="0.264" />
-        <entry key="..\:/myProjects/AndroidStudioProjects/BillSplit/app/src/main/res/layout/create_grp_toolbar.xml" value="0.4" />
       </map>
     </option>
   </component>
@@ -33,5 +57,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.259375" />
+      </ProjectState>
+    </option>
   </component>
 </project>

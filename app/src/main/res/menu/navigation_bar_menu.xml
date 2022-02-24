@@ -2,15 +2,6 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--//menu one
-    <group android:checkableBehavior="single">
-
-        <item android:id="@+id/dashboard_menu"
-            android:icon="@drawable/ic_baseline_dashboard_24"{deleted}
-            android:title="Dashboard" />
-
-    </group>-->
-
     //menu second
     <group android:checkableBehavior="single">
 
