@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BillSplit">
         <activity
+            android:name=".AddNewExpense_2"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewExpense_1"
+            android:exported="false" />
+        <activity
             android:name=".SettleUpPage"
             android:exported="false" />
         <activity
