@@ -4,19 +4,35 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import androidx.fragment.app.Fragment;
+
+import android.app.Dialog;
+//import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.gms.cast.framework.media.ImagePicker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+
 
 public class Homepage extends AppCompatActivity {
 
@@ -46,7 +62,7 @@ public class Homepage extends AppCompatActivity {
         toggle.syncState();
 
         //settle up button function
-        Button settleup_btn = (Button) findViewById(R.id.settleUpBtn);
+        ImageButton settleup_btn = (ImageButton) findViewById(R.id.settleUpBtn);
 
         settleup_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,8 +83,6 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-
-
         // code for changing profile picture  ---> CHANGES NEEDED!
 
        /* profilePic = findViewById(R.id.profileImageView);
@@ -86,6 +100,114 @@ public class Homepage extends AppCompatActivity {
                         .createIntent();
             }
         });*/
+
+        //HomeScreen Bottom Sheet function
+        ImageButton bottommenu = (ImageButton) findViewById(R.id.homeScreenAddBtn);
+
+        bottommenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                showHomeScreenBottomSheetDialog();
+            }
+        });
+
+    }
+
+    private void replaceExpenseFragment(Fragment fragment) {
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.hmscrnFragment,fragment);
+        fragmentTransaction.commit();
+    }
+
+    private void showHomeScreenBottomSheetDialog(){
+
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.activity_homepg_bottomup_sheet);
+
+        LinearLayout newExpense = dialog.findViewById(R.id.bottomMenuExpense);
+        LinearLayout newTransaction = dialog.findViewById(R.id.bottomMenuTransaction);
+        LinearLayout newMember = dialog.findViewById(R.id.bottomMenuAddMember);
+
+        newExpense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        newTransaction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        newMember.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                showAddNewMemberBtmSheetDialogue();
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.HomeScreenBottomAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
+
+    }
+
+    private void showAddNewMemberBtmSheetDialogue(){
+
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.activity_add_new_member_btmsheet);
+
+        ListView listView;
+
+        ArrayList<String> newMembers = new ArrayList<String>();
+
+        EditText newMemberName;
+        Button addNewMember_btn;
+        ImageButton del_mem_btn;
+
+        newMemberName = dialog.findViewById(R.id.input_member_name);
+        addNewMember_btn = dialog.findViewById(R.id.add_new_mem_btn);
+        del_mem_btn = findViewById(R.id.mem_del_btn);
+
+        listView = dialog.findViewById(R.id.add_member_list);
+
+        AddMemberAdapter adapter = new AddMemberAdapter(this, newMembers);
+
+        listView.setAdapter(adapter);
+
+        addNewMember_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String temp_name;
+                temp_name = newMemberName.getText().toString();
+                if(temp_name.length() == 0){
+                    Toast.makeText(getApplicationContext(), "Need to enter member's name", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    newMembers.add(temp_name);
+                    newMemberName.setText("");
+                    adapter.notifyDataSetChanged();
+                    Toast.makeText(getApplicationContext(), "New Member Added", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        dialog.show();
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.getWindow().getAttributes().windowAnimations = R.style.HomeScreenBottomAnimation;
+        dialog.getWindow().setGravity(Gravity.BOTTOM);
 
     }
 
