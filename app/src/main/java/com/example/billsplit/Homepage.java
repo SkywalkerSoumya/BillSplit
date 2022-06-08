@@ -82,8 +82,10 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+//###############################################################################################################################
+//                        code for changing profile picture  ---> CHANGES NEEDED!
+//###############################################################################################################################
 
-        // code for changing profile picture  ---> CHANGES NEEDED!
 
        /* profilePic = findViewById(R.id.profileImageView);
         changeProPicButton = findViewById(R.id.editProfilePicImageButton);
@@ -100,6 +102,8 @@ public class Homepage extends AppCompatActivity {
                         .createIntent();
             }
         });*/
+
+//###############################################################################################################################
 
         //HomeScreen Bottom Sheet function
         ImageButton bottommenu = (ImageButton) findViewById(R.id.homeScreenAddBtn);
