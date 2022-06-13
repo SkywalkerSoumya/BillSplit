@@ -14,41 +14,48 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class SetExpensePageAdapter extends ArrayAdapter<Bills> {
 
-    private final Context mContext;
-    private final ArrayList<Bills> bills;
-    private int mResource;
-    //public String memName = new String();
+    // -------------------------------------------------------------------------------------------------------
+    // START CHANGES RELATED TO PR#8 => ADDING LISTVIEW IN THE EXPENSES FRAGMENT
+    // -------------------------------------------------------------------------------------------------------
 
-    public SetExpensePageAdapter(expensesFragment expensesFragment, int add_expense_list, ArrayList<Bills> billsList) {
-        super(expensesFragment.getContext(), add_expense_list, billsList);
-        mContext = expensesFragment.getContext();
-        mResource = add_expense_list;
-        this.bills = billsList;
+    private final Activity context;
+    private final ArrayList<Bills> members;
+    public String memName = new String();
+    public String memValue = new String();
+
+    public SetExpensePageAdapter(Activity context, ArrayList<Bills> members){
+        super(context, R.layout.add_mem_list, members);
+        this.context = context;
+        this.members = members;
     }
-
-//    public SetExpensePageAdapter(expensesFragment expensesFragment, int add_expense_list, ArrayList<Bills> billsList) {
-//        super();
-//    }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        String name = getItem(position).getbName();
-        int amount = getItem(position).getbAmount();
+        LayoutInflater inflater = context.getLayoutInflater();
+        View rowView = inflater.inflate(R.layout.add_expense_list, null,true);
 
-        Bills b = new Bills(name,amount);
+        TextView name = rowView.findViewById(R.id.billName);
+        TextView value = rowView.findViewById(R.id.billValue);
 
-        LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflater.inflate(R.layout.add_expense_list);
+        name.setText(members.get(position).getbName());
+        value.setText(new String(String.valueOf(members.get(position).getbAmount())));
 
-
+        return rowView;
     }
+
+    // -------------------------------------------------------------------------------------------------------
+    // END CHANGES RELATED TO PR#8 => ADDING LISTVIEW IN THE EXPENSES FRAGMENT
+    // -------------------------------------------------------------------------------------------------------
+
 }
 
 

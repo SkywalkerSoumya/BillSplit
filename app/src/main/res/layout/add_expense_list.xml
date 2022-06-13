@@ -7,21 +7,21 @@
 
 
     <TextView
+        android:id="@+id/billName"
         android:gravity="center"
         android:textAlignment="center"
         android:text="BillName"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:id="@+id/billName"
         android:layout_weight="33.3"/>
 
         <TextView
+            android:id="@+id/billValue"
             android:gravity="center"
             android:textAlignment="center"
             android:text="Amount"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/billValue"
             android:layout_weight="66.6"/>
 
 
