@@ -6,11 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class expensesFragment extends Fragment {
 
@@ -21,18 +24,42 @@ public class expensesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_expenses, container, false);
+
         return view;
     }
+
+// -------------------------------------------------------------------------------------------------------
+// START CHANGES RELATED TO PR#8 => ADDING LISTVIEW IN THE EXPENSES FRAGMENT
+// -------------------------------------------------------------------------------------------------------
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        String[] str = {"kfghkkj","hgsadhjk","jisajti","446","jsdkhg4","kdsha556","654sfa4f"};
+        // Hardcoded Bill List for testing
+        Bills b1 = new Bills("Kashmir", 5000);
+        Bills b2 = new Bills("Gangtok", 7000);
+        Bills b3 = new Bills("Ladakh", 3450);
+        Bills b4 = new Bills("Sandakphu", 3995);
+        Bills b5 = new Bills("Manali", 6580);
 
-        listview = view.findViewById(R.id.expenses_list);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1,str);
+        ArrayList<Bills> billsList = new ArrayList<>();
 
-        listview.setAdapter(adapter);
+        billsList.add(b1);
+        billsList.add(b2);
+        billsList.add(b3);
+        billsList.add(b4);
+        billsList.add(b5);
+
+        listview = view.findViewById(R.id.expenses_listview);
+
+        ArrayAdapter arrayAdapter = new SetExpensePageAdapter(this.getActivity(),  billsList);
+
+        listview.setAdapter(arrayAdapter);
     }
+
+// -------------------------------------------------------------------------------------------------------
+//  END CHANGES RELATED TO PR#8
+// -------------------------------------------------------------------------------------------------------
+
 }

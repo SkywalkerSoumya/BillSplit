@@ -20,7 +20,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/scrollView2"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation_bar_menu" />
+        app:menu="@menu/navigation_bar_menu" >
+
+<!--        <androidx.viewpager2.widget.ViewPager2-->
+<!--            android:id="@+id/viewpager2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+    </com.google.android.material.navigation.NavigationView>
+
 
     <!--<ScrollView
         android:id="@+id/scrollView2"
@@ -41,49 +48,86 @@
             android:layout_height="wrap_content"
             android:background="@color/secondaryColor"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:elevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/overviewBtn"
-            android:layout_width="116dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="70dp"
-            android:background="@drawable/add_more_grp_btn_bg"
-            android:fontFamily="monospace"
-            android:text="OVERVIEW"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:typeface="normal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <!--        <Button-->
+        <!--            android:id="@+id/overviewBtn"-->
+        <!--            android:layout_width="116dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_marginStart="60dp"-->
+        <!--            android:layout_marginTop="70dp"-->
+        <!--            android:background="@drawable/add_more_grp_btn_bg"-->
+        <!--            android:fontFamily="monospace"-->
+        <!--            android:text="OVERVIEW"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:typeface="normal"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <Button
-            android:id="@+id/expensesBtn"
-            android:layout_width="116dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="60dp"
-            android:background="@drawable/add_more_grp_btn_bg"
-            android:fontFamily="monospace"
-            android:text="Expenses"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold"
+        <!--        <Button-->
+        <!--            android:id="@+id/expensesBtn"-->
+        <!--            android:layout_width="116dp"-->
+        <!--            android:layout_height="25dp"-->
+        <!--            android:layout_marginTop="70dp"-->
+        <!--            android:layout_marginEnd="60dp"-->
+        <!--            android:background="@drawable/add_more_grp_btn_bg"-->
+        <!--            android:fontFamily="monospace"-->
+        <!--            android:text="Expenses"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/homeTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/secondaryColor"
+            app:tabIndicatorColor="@color/purple_700"
+            app:tabSelectedTextColor="@color/purple_700"
+            app:tabTextColor="@color/black"
+            android:elevation="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/hmscrnFragment"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OVERVIEW" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EXPENSES" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/hmscrnFragment"
+            app:layout_constraintTop_toBottomOf="@+id/homeTabLayout" />
 
         <FrameLayout
             android:id="@+id/hmscrnFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/overviewBtn"
+            app:layout_constraintTop_toBottomOf="parent"
             tools:layout_editor_absoluteX="0dp" />
 
         <ImageButton
@@ -111,7 +155,9 @@
             app:layout_constraintStart_toStartOf="@+id/homeScreenAddBtn"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <!--</ScrollView>-->
 

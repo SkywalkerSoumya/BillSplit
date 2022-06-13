@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Dialog;
 //import android.app.Fragment;
@@ -27,9 +28,10 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.gms.cast.framework.media.ImagePicker;
+//import com.google.android.gms.cast.framework.media.ImagePicker;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
@@ -41,8 +43,11 @@ public class Homepage extends AppCompatActivity {
     Toolbar toolbar;
     //ImageView profilePic;
     //ImageButton changeProPicButton;
+    TabLayout tabLayout;
+    ViewPager2 viewPager2;
+    HmpgSliderAdapter sliderAdapter;
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +56,6 @@ public class Homepage extends AppCompatActivity {
         // code for sideview navigation bar
         drawerLayout = findViewById(R.id.navbarlayout);
         navView = findViewById(R.id.navview);
-
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
@@ -72,20 +76,54 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-        // Expenses button function
-        Button expenses_btn = (Button) findViewById(R.id.expensesBtn);
+        //----Homepage slider function code----
+        tabLayout = findViewById(R.id.homeTabLayout);
+        viewPager2 = findViewById(R.id.viewpager2);
 
-        expenses_btn.setOnClickListener(new View.OnClickListener() {
+        FragmentManager fragManager = getSupportFragmentManager();
+        sliderAdapter = new HmpgSliderAdapter(fragManager,getLifecycle());
+        viewPager2.setAdapter(sliderAdapter);
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent(Homepage.this,Expenses_Details.class);
-                startActivity(intent2);
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
 //###############################################################################################################################
 //                        code for changing profile picture  ---> CHANGES NEEDED!
 //###############################################################################################################################
 
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                tabLayout.selectTab(tabLayout.getTabAt(position));
+            }
+        });
+
+        // Expenses button function
+//        Button expenses_btn = (Button) findViewById(R.id.expensesBtn);
+//
+//        expenses_btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent2 = new Intent(Homepage.this,Expenses_Details.class);
+//                startActivity(intent2);
+//            }
+//        });
+
+        // code for changing profile picture  ---> CHANGES NEEDED!
 
        /* profilePic = findViewById(R.id.profileImageView);
         changeProPicButton = findViewById(R.id.editProfilePicImageButton);

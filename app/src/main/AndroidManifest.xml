@@ -20,9 +20,6 @@
             android:name=".SettleUpPage"
             android:exported="false" />
         <activity
-            android:name=".Expenses_Details"
-            android:exported="false" />
-        <activity
             android:name=".CreateGroup"
             android:exported="false" />
         <activity

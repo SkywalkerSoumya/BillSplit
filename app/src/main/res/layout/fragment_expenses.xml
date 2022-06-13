@@ -7,22 +7,14 @@
     android:background="@color/primaryColor"
     tools:context=".expensesFragment">
 
-<!--    &lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
-<!--    <TextView-->
-<!--        android:id="@+id/expenseFragment"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="339dp"-->
-<!--        android:text="Expenses Fragment"-->
-<!--        android:textSize="40sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/expenses_list" />-->
-
     <ListView
-        android:id="@+id/expenses_list"
+        android:id="@+id/expenses_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Hellow" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
