@@ -26,6 +26,7 @@ public class expensesFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_expenses, container, false);
         return view;
+        //return inflater.inflate(R.layout.fragment_expenses, container, false);
     }
 
     @Override
@@ -53,7 +54,7 @@ public class expensesFragment extends Fragment {
 //        Log.e("abcde464654",billsList.toString());
 //        System.out.println("6546546464646464646464");
 
-        SetExpensePageAdapter adapter = new SetExpensePageAdapter(this,  R.layout.add_expense_list, billsList);
+        SetExpensePageAdapter adapter = new SetExpensePageAdapter(this, R.layout.add_expense_list, billsList);
         listview.setAdapter(adapter);
     }
 }

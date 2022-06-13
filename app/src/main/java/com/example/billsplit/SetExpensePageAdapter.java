@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,39 +19,39 @@ import java.util.List;
 
 public class SetExpensePageAdapter extends ArrayAdapter<Bills> {
 
-    private Context mContext;
-    private ArrayList<Bills> list;
+    private final Context mContext;
+    private final ArrayList<Bills> bills;
     private int mResource;
-    public SetExpensePageAdapter(@NonNull expensesFragment context, int resource, @NonNull ArrayList<Bills> objects) {
-        super(context.getContext(), resource, objects);
-        this.mContext = context.getContext();
-        this.list = objects;
-        this.mResource = resource;
+    //public String memName = new String();
 
+    public SetExpensePageAdapter(expensesFragment expensesFragment, int add_expense_list, ArrayList<Bills> billsList) {
+        super(expensesFragment.getContext(), add_expense_list, billsList);
+        mContext = expensesFragment.getContext();
+        mResource = add_expense_list;
+        this.bills = billsList;
     }
+
+//    public SetExpensePageAdapter(expensesFragment expensesFragment, int add_expense_list, ArrayList<Bills> billsList) {
+//        super();
+//    }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-//       String billname = getItem(position).getbName();
-        String billname = list.get(position).getbName();
-       int billamount = getItem(position).getbAmount();:
 
-       Bills bills = new Bills(billname,billamount);
+        String name = getItem(position).getbName();
+        int amount = getItem(position).getbAmount();
+
+        Bills b = new Bills(name,amount);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflater.inflate(mResource, parent, false);
+        convertView = inflater.inflate(R.layout.add_expense_list);
 
-        TextView bName = (TextView) convertView.findViewById(R.id.billName);
-        TextView bValue = (TextView) convertView.findViewById(R.id.billValue);
-
-        bName.setText(billname);
-        bValue.setText(billamount);
-
-        return convertView;
 
     }
 }
+
+
 
 
 
