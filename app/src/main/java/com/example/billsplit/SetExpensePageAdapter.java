@@ -31,23 +31,25 @@ public class SetExpensePageAdapter extends ArrayAdapter<Bills> {
         this.bills = billsList;
     }
 
-//    public SetExpensePageAdapter(expensesFragment expensesFragment, int add_expense_list, ArrayList<Bills> billsList) {
-//        super();
-//    }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        String name = getItem(position).getbName();
-        int amount = getItem(position).getbAmount();
-
+        String name = bills.get(position).getbName();
+        int amount = bills.get(position).getbAmount();
         Bills b = new Bills(name,amount);
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
-        convertView = inflater.inflate(R.layout.add_expense_list);
+        convertView = inflater.inflate(R.layout.add_expense_list,null);
 
+        TextView bName = convertView.findViewById(R.id.billName);
+        TextView bAmount = convertView.findViewById(R.id.billValue);
 
+        bName.setText(name);
+        bAmount.setText(new String(String.valueOf(amount)));
+
+        return convertView;
     }
 }
 

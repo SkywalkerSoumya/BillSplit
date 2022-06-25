@@ -21,8 +21,7 @@ public class expensesFragment extends Fragment {
     ListView listview;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_expenses, container, false);
         return view;
@@ -50,9 +49,6 @@ public class expensesFragment extends Fragment {
         billsList.add(b4);
         billsList.add(b5);
 
-//        System.out.println("6546546464646464646464\n");
-//        Log.e("abcde464654",billsList.toString());
-//        System.out.println("6546546464646464646464");
 
         SetExpensePageAdapter adapter = new SetExpensePageAdapter(this, R.layout.add_expense_list, billsList);
         listview.setAdapter(adapter);

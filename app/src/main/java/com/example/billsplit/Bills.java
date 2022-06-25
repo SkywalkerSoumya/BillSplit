@@ -14,15 +14,12 @@ public class Bills {
         return bName;
     }
 
-    public void setbName(String bName) {
-        this.bName = bName;
-    }
 
     public int getbAmount() {
         return bAmount;
     }
 
-    public void setbAmount(int bAmount) {
-        this.bAmount = bAmount;
-    }
+//    public void setbAmount(int bAmount) {
+//        this.bAmount = bAmount;
+//    }
 }
