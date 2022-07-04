@@ -55,8 +55,8 @@ public class Homepage extends AppCompatActivity {
 
         // code for sideview navigation bar
         drawerLayout = findViewById(R.id.navbarlayout);
-        navView = findViewById(R.id.navview);
-        toolbar = findViewById(R.id.toolbar);
+        // navView = findViewById(R.id.navview);
+//        toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
 
