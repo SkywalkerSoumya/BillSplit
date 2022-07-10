@@ -12,41 +12,41 @@
     </group>-->
 
     //menu second
-    <group android:checkableBehavior="single">
+<!--    <group android:checkableBehavior="single">-->
 
-        <item android:title="Recents">
+<!--        <item android:title="Recents">-->
 
-            <menu>
-                <item
-                    android:id="@+id/grp_1"
-                    android:title="GROUP1" />
+<!--            <menu>-->
+<!--                <item-->
+<!--                    android:id="@+id/grp_1"-->
+<!--                    android:title="GROUP1" />-->
 
-                <item
-                    android:id="@+id/grp_2"
-                    android:title="GROUP2" />
+<!--                <item-->
+<!--                    android:id="@+id/grp_2"-->
+<!--                    android:title="GROUP2" />-->
 
-                <item
-                    android:id="@+id/more_grp"
-                    android:title="More..." />
+<!--                <item-->
+<!--                    android:id="@+id/more_grp"-->
+<!--                    android:title="More..." />-->
 
-            </menu>
+<!--            </menu>-->
 
-        </item>
+<!--        </item>-->
 
-    </group>
-    <group>
-        <item android:title="">
-            <menu>
-                <item android:id="@+id/share_menu"
-                    android:icon="@drawable/share_icon"
-                    android:title="Share App" />
+<!--    </group>-->
+<!--    <group>-->
+<!--        <item android:title="">-->
+<!--            <menu>-->
+<!--                <item android:id="@+id/share_menu"-->
+<!--                    android:icon="@drawable/share_icon"-->
+<!--                    android:title="Share App" />-->
 
-                <item android:id="@+id/about_menu"
-                    android:icon="@drawable/about_icon"
-                    android:title="About" />
+<!--                <item android:id="@+id/about_menu"-->
+<!--                    android:icon="@drawable/about_icon"-->
+<!--                    android:title="About" />-->
 
-            </menu>
-        </item>
-    </group>
+<!--            </menu>-->
+<!--        </item>-->
+<!--    </group>-->
 
 </menu>

@@ -3,8 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/about_icon.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/add_expense_screen.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/add_more_grp_btn_bg.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/add_more_grp_button.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/bottom_dialoguemenu_bg.xml" value="0.2755208333333333" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/button_next.xml" value="0.20833333333333334" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/camera_icon.xml" value="0.2755208333333333" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/groupthumbnail.xml" value="0.2037037037037037" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/homescreen_add_btn.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/homescreen_allbtn_bg.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2755208333333333" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/menu_icon.xml" value="0.2755208333333333" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/drawable/newgrpbtn.xml" value="0.2037037037037037" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_add_new_expense_1.xml" value="0.264" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/activity_add_new_expense_2.xml" value="0.17708333333333334" />
@@ -25,6 +36,7 @@
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/create_grp_toolbar.xml" value="0.12613981762917933" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/fragment_expenses.xml" value="0.10207700101317123" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/fragment_overview.xml" value="0.259375" />
+        <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/home_nav_drawer.xml" value="0.264" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/layout/new_expense_mem_list.xml" value="0.17708333333333334" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/menu/navigation_bar_menu.xml" value="0.23425925925925925" />
         <entry key="..\:/ANDROID STUDIO PROJECTS/BillSplit/app/src/main/res/menu/sidemenu.xml" value="0.2553846153846154" />

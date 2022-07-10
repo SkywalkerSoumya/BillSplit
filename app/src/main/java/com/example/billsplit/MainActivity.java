@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.StrictMode;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -53,13 +54,19 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent;
 
-                if(firstTimeUser) {
-                    intent = new Intent(MainActivity.this, onboardingScreen_1.class);
-                    editor.putBoolean("firstTimeUser", false);
-                    editor.apply(); //updating boolean to false so that next time direct homepage will open
-                }else{
-                    intent = new Intent(MainActivity.this, Homepage.class);
-                }
+//###############################################################################################################################
+//                Commenting the portion to remove the chek for first time user. Needs to be uncommented later.
+//###############################################################################################################################
+//                if(firstTimeUser) {
+//                    intent = new Intent(MainActivity.this, onboardingScreen_1.class);
+//                    editor.putBoolean("firstTimeUser", false);
+//                    editor.apply(); //updating boolean to false so that next time direct homepage will open
+//                }else{
+//                    intent = new Intent(MainActivity.this, CreateGroup.class);
+//                }
+//###############################################################################################################################
+
+                intent = new Intent(MainActivity.this, Homepage.class);
 
                 startActivity(intent);
                 finish(); // Using the finish function so that user can't revert back` to this page pressing the back button.

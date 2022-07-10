@@ -11,22 +11,22 @@
     tools:openDrawer="start">
 
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navview"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/activity_navmenu_id"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/scrollView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation_bar_menu" >
+<!--    <com.google.android.material.navigation.NavigationView-->
+<!--        android:id="@+id/navview"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_gravity="start"-->
+<!--        app:headerLayout="@layout/activity_navmenu_id"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/scrollView2"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:menu="@menu/navigation_bar_menu" >-->
 
-<!--        <androidx.viewpager2.widget.ViewPager2-->
-<!--            android:id="@+id/viewpager2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent" />-->
-    </com.google.android.material.navigation.NavigationView>
+<!--&lt;!&ndash;        <androidx.viewpager2.widget.ViewPager2&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/viewpager2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent" />&ndash;&gt;-->
+<!--    </com.google.android.material.navigation.NavigationView>-->
 
 
     <!--<ScrollView
@@ -47,12 +47,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/secondaryColor"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:onClick="ClickMenu"
             android:elevation="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             tools:ignore="MissingConstraints" />
 
         <!--        <Button-->
@@ -158,6 +155,15 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:background="@color/teal_700"
+        android:layout_gravity="start">
+
+        <include layout="@layout/home_nav_drawer" />
+
+    </RelativeLayout>
 
     <!--</ScrollView>-->
 

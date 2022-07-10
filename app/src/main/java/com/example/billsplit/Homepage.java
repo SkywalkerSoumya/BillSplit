@@ -3,6 +3,7 @@ package com.example.billsplit;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -55,15 +56,15 @@ public class Homepage extends AppCompatActivity {
 
         // code for sideview navigation bar
         drawerLayout = findViewById(R.id.navbarlayout);
-        navView = findViewById(R.id.navview);
-        toolbar = findViewById(R.id.toolbar);
-
-        setSupportActionBar(toolbar);
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
-
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+        //navView = findViewById(R.id.navview);
+//        toolbar = findViewById(R.id.toolbar);
+//
+//        setSupportActionBar(toolbar);
+//
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
+//
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
 
         //settle up button function
         ImageButton settleup_btn = (ImageButton) findViewById(R.id.settleUpBtn);
@@ -100,6 +101,9 @@ public class Homepage extends AppCompatActivity {
 
             }
         });
+//###############################################################################################################################
+//                        code for changing profile picture  ---> CHANGES NEEDED!
+//###############################################################################################################################
 
         viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
@@ -138,6 +142,8 @@ public class Homepage extends AppCompatActivity {
             }
         });*/
 
+//###############################################################################################################################
+
         //HomeScreen Bottom Sheet function
         ImageButton bottommenu = (ImageButton) findViewById(R.id.homeScreenAddBtn);
 
@@ -150,6 +156,15 @@ public class Homepage extends AppCompatActivity {
         });
 
     }
+
+    public void ClickMenu(View view){
+        openDrawer(drawerLayout);
+    }
+
+    private void openDrawer(DrawerLayout drawerLayout) {
+        drawerLayout.openDrawer(GravityCompat.START);
+    }
+
 
     private void replaceExpenseFragment(Fragment fragment) {
 
@@ -203,7 +218,7 @@ public class Homepage extends AppCompatActivity {
 
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.activity_add_new_member_btmsheet);
+         dialog.setContentView(R.layout.activity_add_new_member_btmsheet);
 
         ListView listView;
 
