@@ -7,19 +7,19 @@
 
 
     <TextView
-        android:id="@+id/billName"
+        android:id="@+id/PersonName"
         android:gravity="start"
         android:textAlignment="textStart"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:paddingLeft="15dp"
-        android:text="BillName"
+        android:textStyle="bold"
+        android:text="Person name"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_weight="33.3"/>
 
     <TextView
-        android:id="@+id/billValue"
+        android:id="@+id/PersonAmount"
         android:gravity="center"
         android:textAlignment="center"
         android:textSize="20dp"
