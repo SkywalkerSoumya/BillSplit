@@ -42,29 +42,36 @@ public class Homepage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navView;
     Toolbar toolbar;
-    //ImageView profilePic;
-    //ImageButton changeProPicButton;
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     HmpgSliderAdapter sliderAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
 
-        // code for sideview navigation bar
+        // code for side-navigation bar
         drawerLayout = findViewById(R.id.navbarlayout);
-        //navView = findViewById(R.id.navview);
-//        toolbar = findViewById(R.id.toolbar);
-//
-//        setSupportActionBar(toolbar);
-//
-//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
-//
-//        drawerLayout.addDrawerListener(toggle);
-//        toggle.syncState();
+
+//  ##############################################################################################################################
+//      Need to find out if we need this portion of the code as we already removed toolbar widget from the xml file.
+//  ###############################################################################################################################
+
+
+        // navView = findViewById(R.id.navview);
+        // toolbar = findViewById(R.id.toolbar);
+
+
+        setSupportActionBar(toolbar);
+
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
+
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+//  ###############################################################################################################################
+
 
         //settle up button function
         ImageButton settleup_btn = (ImageButton) findViewById(R.id.settleUpBtn);
@@ -101,6 +108,7 @@ public class Homepage extends AppCompatActivity {
 
             }
         });
+
 //###############################################################################################################################
 //                        code for changing profile picture  ---> CHANGES NEEDED!
 //###############################################################################################################################
@@ -113,18 +121,6 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-        // Expenses button function
-//        Button expenses_btn = (Button) findViewById(R.id.expensesBtn);
-//
-//        expenses_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent2 = new Intent(Homepage.this,Expenses_Details.class);
-//                startActivity(intent2);
-//            }
-//        });
-
-        // code for changing profile picture  ---> CHANGES NEEDED!
 
        /* profilePic = findViewById(R.id.profileImageView);
         changeProPicButton = findViewById(R.id.editProfilePicImageButton);
@@ -150,21 +146,11 @@ public class Homepage extends AppCompatActivity {
         bottommenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 showHomeScreenBottomSheetDialog();
             }
         });
 
     }
-
-    public void ClickMenu(View view){
-        openDrawer(drawerLayout);
-    }
-
-    private void openDrawer(DrawerLayout drawerLayout) {
-        drawerLayout.openDrawer(GravityCompat.START);
-    }
-
 
     private void replaceExpenseFragment(Fragment fragment) {
 
@@ -218,7 +204,7 @@ public class Homepage extends AppCompatActivity {
 
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-         dialog.setContentView(R.layout.activity_add_new_member_btmsheet);
+        dialog.setContentView(R.layout.activity_add_new_member_btmsheet);
 
         ListView listView;
 
@@ -261,6 +247,11 @@ public class Homepage extends AppCompatActivity {
         dialog.getWindow().getAttributes().windowAnimations = R.style.HomeScreenBottomAnimation;
         dialog.getWindow().setGravity(Gravity.BOTTOM);
 
+    }
+
+    // This function is triggered when the menu icon in the HomePage toolbar is clicked. The mapping is created from the activity_homepage.xml file. line-no 60. " android:onClick="clickMenu" "
+    public void clickMenu(View view){
+        drawerLayout.openDrawer(Gravity.LEFT);
     }
 
 }

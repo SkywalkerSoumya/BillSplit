@@ -10,78 +10,72 @@
     tools:context=".Homepage"
     tools:openDrawer="start">
 
-
-<!--    <com.google.android.material.navigation.NavigationView-->
-<!--        android:id="@+id/navview"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_gravity="start"-->
-<!--        app:headerLayout="@layout/activity_navmenu_id"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/scrollView2"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:menu="@menu/navigation_bar_menu" >-->
-
-<!--&lt;!&ndash;        <androidx.viewpager2.widget.ViewPager2&ndash;&gt;-->
-<!--&lt;!&ndash;            android:id="@+id/viewpager2"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;            android:layout_height="match_parent" />&ndash;&gt;-->
-<!--    </com.google.android.material.navigation.NavigationView>-->
-
-
-    <!--<ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">-->
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
+<!-- ############################################################################################################################### -->
+<!--        ToolBar widget is removed and manual toolBar is added. If necessary a separate toolbar file may be created in future.    -->
+<!-- ############################################################################################################################### -->
+
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/secondaryColor"-->
+<!--            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"-->
+<!--            android:elevation="0dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:ignore="MissingConstraints" />-->
+
+<!-- ############################################################################################################################### -->
+<!--                                   End Changes                                                                                   -->
+<!-- ############################################################################################################################### -->
+
+
+<!-- ############################################################################################################################### -->
+<!--                                Start Manual Toolbar                                                                             -->
+<!-- ############################################################################################################################### -->
+
+
+        <RelativeLayout
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:padding="15dp"
             android:background="@color/secondaryColor"
-            android:onClick="ClickMenu"
-            android:elevation="0dp"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <!--        <Button-->
-        <!--            android:id="@+id/overviewBtn"-->
-        <!--            android:layout_width="116dp"-->
-        <!--            android:layout_height="25dp"-->
-        <!--            android:layout_marginStart="60dp"-->
-        <!--            android:layout_marginTop="70dp"-->
-        <!--            android:background="@drawable/add_more_grp_btn_bg"-->
-        <!--            android:fontFamily="monospace"-->
-        <!--            android:text="OVERVIEW"-->
-        <!--            android:textAlignment="center"-->
-        <!--            android:textSize="16sp"-->
-        <!--            android:textStyle="bold"-->
-        <!--            android:typeface="normal"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+            <ImageButton
+                android:id="@+id/left_icon_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:onClick="clickMenu"
+                android:background="@drawable/menu_icon" />
 
-        <!--        <Button-->
-        <!--            android:id="@+id/expensesBtn"-->
-        <!--            android:layout_width="116dp"-->
-        <!--            android:layout_height="25dp"-->
-        <!--            android:layout_marginTop="70dp"-->
-        <!--            android:layout_marginEnd="60dp"-->
-        <!--            android:background="@drawable/add_more_grp_btn_bg"-->
-        <!--            android:fontFamily="monospace"-->
-        <!--            android:text="Expenses"-->
-        <!--            android:textAlignment="center"-->
-        <!--            android:textSize="16sp"-->
-        <!--            android:textStyle="bold"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@+id/left_icon_menu"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="BillSplit"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+<!-- ############################################################################################################################### -->
+<!--        End Manual Toolbar    -->
+<!-- ############################################################################################################################### -->
 
 
         <com.google.android.material.tabs.TabLayout
@@ -164,7 +158,5 @@
         <include layout="@layout/home_nav_drawer" />
 
     </RelativeLayout>
-
-    <!--</ScrollView>-->
 
 </androidx.drawerlayout.widget.DrawerLayout>

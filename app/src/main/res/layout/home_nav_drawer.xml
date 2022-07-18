@@ -12,7 +12,7 @@
         android:id="@+id/profileImageView"
         android:layout_width="160dp"
         android:layout_height="160dp"
-        android:src="@drawable/blank_face_foreground"
+        android:background="@drawable/blank_face_foreground"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -25,45 +25,40 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="129dp"
+        android:layout_marginTop="-20dp"
         android:layout_marginEnd="55dp"
-        android:layout_marginBottom="11dp"
         android:ems="10"
         android:hint="Member"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.326" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
 
     <ImageButton
         android:id="@+id/editProfilePicImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:src="@drawable/camera_icon"
-        app:layout_constraintBottom_toTopOf="@+id/editUserName"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/camera_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/profileImageView"
         app:layout_constraintEnd_toEndOf="@+id/profileImageView" />
 
     <ImageButton
         android:id="@+id/editNameImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="14dp"
+        android:layout_marginStart="-5dp"
         android:layout_marginBottom="9dp"
         android:background="?android:attr/selectableItemBackground"
         android:src="@drawable/edit_icon"
         app:layout_constraintBottom_toBottomOf="@+id/editUserName"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton" />
+        app:layout_constraintStart_toEndOf="@+id/editUserName" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="490dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,18 +68,16 @@
         android:id="@+id/imageButton"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="-40dp"
         android:background="@drawable/add_more_grp_btn_bg"
         android:src="@drawable/add_more_grp_button"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-            <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="475dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="0dp">
